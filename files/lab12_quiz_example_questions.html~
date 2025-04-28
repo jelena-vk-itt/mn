@@ -1,0 +1,15 @@
+<style> * {font-size: x-large} li { margin: 2em 0 }</style>
+<ol>
+    <li>Which class in your code represents the data-reading entity?</li>
+    <li>What are the parameters in the method that converts A to B in your code? Explain what they represent.</li>
+    <li>Write out the list of operations in the stream pipeline that converts a line from the file into a score in your code. Each line should be in the following format:
+
+	<p>CREATION/INTERMEDIATE/TERMINAL: description of the operation</p>
+	
+	<p>For example:</p>
+	
+	<p>CREATION: creation of stream from range of numbers [1, 10]<br/>
+	    INTERMEDIATE: map of number to the square of the number<br/>
+	    TERMINAL: saving of the number squares into a list</p>
+    </li>
+</ol>
