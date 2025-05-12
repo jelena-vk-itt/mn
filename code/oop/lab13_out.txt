@@ -1,0 +1,21 @@
+Type:       book
+Title:      1984
+Author:     George Orwell
+In library: yes
+
+Type:       book
+Title:      To Kill a Mockingbird
+Author:     Harper Lee
+In library: yes
+
+Type:       magazine
+Name:       National Geographic
+Year:       2023
+Number:     11
+In library: yes
+
+Type:       magazine
+Name:       Time
+Year:       2025
+Number:     2
+In library: yes
