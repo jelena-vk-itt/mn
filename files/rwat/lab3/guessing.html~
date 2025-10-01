@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JS Complete</title>
+
+	<style>
+	 body { padding:2em; }
+	 img { max-height: 100%; max-width:100%; }
+	 #box0, #box1, #box2 { width:259px; height:194px; border: 1px solid black; margin-right: 2em; float: left; text-align: center; line-height: 8em}
+	</style>
+    </head>
+    <body>
+	<div id="box0" onclick="handleGuess(0);"></div>
+	<div id="box1" onclick="handleGuess(1);"></div>
+	<div id="box2" onclick="handleGuess(2);"></div>
+	<button onclick="onStart();">Start</button>
+	<p id="msg"></p>
+
+	<script src="guessing.js"></script>
+    </body>
+</html>
