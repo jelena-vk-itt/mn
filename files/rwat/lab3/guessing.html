@@ -1,18 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Guessing</title>
+<head>
+	<meta charset="UTF-8" />
+	<title>Guessing</title>
+	<style>
+		body {
+			padding: 2em;
+		}
 
-    </head>
-    <body>
+		img {
+			max-height: 100%;
+			max-width: 100%;
+		}
+
+		.box {
+			width: 259px;
+			height: 194px;
+			border: 1px solid black;
+			margin-right: 2em;
+			float: left;
+			text-align: center;
+			line-height: 8em
+		}
+	</style>
+</head>
+
+<body>
 	<div class="container">
-	    <div class="box"></div>
-	    <div class="box"></div>
-	    <div class="box"></div>
-	    <button>Start</button>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<button>Start</button>
 	</div>
 	<p id="msg"></p>
 
 	<script src="guessing.js"></script>
-    </body>
+</body>
+
 </html>
