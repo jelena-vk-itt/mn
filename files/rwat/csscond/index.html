@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+	<style>
+
+	 html, body, .block-container, .card-container { height: 100%; }
+	 
+	 .container {
+	     container-type: size;
+	     container-name: card;
+
+	     /* or shorthand:
+		container:  card / size;
+	     */
+	 }
+	 
+	 @container (max-width: 600px) {
+	     .in-narrow {
+		 background-color: pink;
+	     }
+	 }
+
+	 @container (max-width: 600px) and (max-height: 400px) {
+	     .in-small-block {
+		 background-color: maroon;
+		 color: white;
+	     }
+	 }
+
+	 @container card (orientation: landscape) {
+	     .in-card {
+		 background-color: lightgreen;
+	     }
+	 }
+	 
+	</style>
+    </head>
+    <body>
+	<article class="container">
+	    <p class="in-narrow">Hello, world, from in-narrow class!</p>
+	    <p class="in-small-block">Hello, world, from in-small-block class!</p>
+	    <p class="in-card">Hello, world, from in-card class!</p>
+	</article>
+    </body>
+</html>
