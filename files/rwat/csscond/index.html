@@ -5,10 +5,18 @@
         <title>Document</title>
 	<style>
 
-	 html, body, .block-container, .card-container { height: 100%; }
+	 html, body, article { height: 100%; }
 	 
-	 .container {
+	 article {
+		 /* if the next line were
+		 container-type: inline-size;
+		 then the second @container condition below would 
+		 be ignored as it includes a height check */
 	     container-type: size;
+		 
+		 /* if the next line were not included, then the
+		 third @container condition below would be ignored
+		 for article, as it requires containers of type card */
 	     container-name: card;
 
 	     /* or shorthand:
@@ -38,7 +46,7 @@
 	</style>
     </head>
     <body>
-	<article class="container">
+	<article>
 	    <p class="in-narrow">Hello, world, from in-narrow class!</p>
 	    <p class="in-small-block">Hello, world, from in-small-block class!</p>
 	    <p class="in-card">Hello, world, from in-card class!</p>
