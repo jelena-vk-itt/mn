@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- accessibility: added the language attribute -->
+<html lang="en">
+
+    <head>
+	<meta charset="UTF-8" />
+	<title>Boards</title>
+	<style>
+	 * {
+	     box-sizing: border-box;
+	     font-family: sans-serif;
+	 }
+
+	 h1 {
+	     text-align: center;
+	 }
+
+	 h2 {
+	     margin: 0 0 0.5em 0;
+	 }
+
+	 .vertical input,
+	 select {
+	     width: 100%;
+	 }
+
+	 fieldset+fieldset {
+	     margin-top: 1.3em;
+	 }
+
+	 dialog {
+	     width: 30em;
+	     padding: 0.8em;
+	 }
+
+	 button {
+	     padding: 0.5em;
+	     font-weight: bold;
+	 }
+
+	 .section-group {
+	     display: flex;
+	     gap: 1em;
+	     margin-bottom: 1em;
+	 }
+
+	 .section-group:last-child {
+	     margin-bottom: 0;
+	 }
+
+	 .section-group section {
+	     display: flex;
+	     flex-direction: column;
+	 }
+
+	 .section-group section :last-child {
+	     flex-grow: 1;
+	 }
+
+	 
+	 fieldset p {
+	     margin: 0.3em 0;
+	 }
+
+	 fieldset.vertical p {
+	     margin: 0.8em 0 0;
+	 }
+
+	 input,
+	 select {
+	     font-size: 100%;
+	 }
+
+	 .field-description {
+	     margin-top: 0;
+	     font-size: small;
+	     /* accessibility: change gray to darkslategray */
+	     color: darkslategray;
+	 }
+
+	 article {
+	     width: 40em;
+	     margin: auto;
+	 }
+
+	 .submit {
+	     text-align: right;
+	     margin: 0.5em 0 0 0;
+	 }
+	</style>
+    </head>
+
+    <body>
+	<p style="color:red">Search the HTML file for the word 'accessibility' to see what modifications were made in this solution.</p>
+	<!-- accessibility: add a label to the dialog ('Registration dialog') -->
+	<dialog aria-label="Registration dialog" tabindex="-1" open>
+	    <form action="dialog">
+		<h2>Register with Discussion Boards</h2>
+		<p>Required fields are marked with an asterisk (<strong><span aria-label="required">*</span></strong>).</p>
+		<fieldset class="vertical">
+		    <legend>Personal details</legend>
+		    <p>
+			<label for="username">
+			    <span>User name: </span>
+			    <strong><span>*</span></strong>
+			</label>
+			<input type="text" id="username" minlength="1" required autofocus />
+		    </p>
+		    <p>
+			<label for="password">
+			    <span>Password: </span>
+			    <strong><span>*</span></strong>
+			</label>
+			<input type="password" id="password"
+			       pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#%&*_=\+\-\$\^]).{8,12}" required>
+			<span class="field-description">The password must be 8 to 12 characters long and contain at least
+			    one of: a lower case letter, an upper case letter, a digit and a special character
+			    (!@#%&*_=+-$^).</span>
+		    </p>
+		    <p>
+			<label for="email">
+			    <span>Email: </span>
+			    <strong><span>*</span></strong>
+			</label>
+			<input type="email" id="email" required>
+		    </p>
+		    <p>
+			<label for="dob">
+			    <span>Date of birth: </span>
+			</label>
+			<!-- accessibility: the firefox auditor reports problems with the spinners in the date picker, but these are not really problems and cannot be fixed -->
+			<input type="date" id="dob">
+			<span class="field-description">If you provide your date of birth, it will be easier for us to
+			    direct you to boards with members of a similar age.</span>
+		    </p>
+		</fieldset>
+
+		<fieldset>
+		    <legend>Additional information</legend>
+		    <div class="section-group">
+			<section>
+			    <p>Which of these does your joining our community relate to?</p>
+			    <p>
+				<input type="checkbox" id="work" name="work" data-label="Community joined in relation to"
+					     value="W" />
+				<label for="work">Work</label>
+			    </p>
+			    <p>
+				<input type="checkbox" id="hobbies" name="hobbies"
+					     data-label="Community joined in relation to" value="H" />
+				<label for="hobbies">Hobbies</label>
+			    </p>
+			    <p>
+				<input type="checkbox" id="entertainment" name="entertainment"
+					     data-label="Community joined in relation to" value="E" />
+				<label for="entertainment">Entertainment</label>
+			    </p>
+			</section>
+			<section>
+			    <!-- accessibility: turned the paragraph into a label for 'areas' -->
+			    <label for="areas">Please select some topics of interest to you</p>
+			    <select id="areas" name="areas" data-label="Topics of interest" multiple>
+				<option>Computer science</option>
+				<option>Data science</option>
+				<option>Statistics</option>
+				<option>Carpentry</option>
+				<option>Knitting</option>
+				<option>Crochet</option>
+				<option>Running</option>
+				<option>Cycling</option>
+				<option>Yoga</option>
+				<option>Piano</option>
+			    </select>
+			</section>
+		    </div>
+
+		    <div class="section-group">
+			<section>
+			    <p>Please let us know if you are available to volunteer in our community and for how many hours
+				per week</p>
+			    <p>
+				<input type="radio" id="none" name="volunteering" value="N" checked />
+				<label for="none">Not available</label>
+			    </p>
+			    <p>
+				<input type="radio" id="one" name="volunteering" value="O" />
+				<label for="one">1 hour</label>
+			    </p>
+			    <p>
+				<input type="radio" id="two" name="volunteering" value="T" />
+				<label for="two">2-3 hours</label>
+			    </p>
+			    <p>
+				<input type="radio" id="four" name="volunteering" value="F" />
+				<label for="four">4-5 hours</label>
+			    </p>
+			</section>
+		    </div>
+		</fieldset>
+		<p class="submit">
+		    <button type="submit">Register</button>
+		</p>
+	    </form>
+	</dialog>
+	<script src="main.js"></script>
+    </body>
+
+</html>

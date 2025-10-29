@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+
+	<style>
+	 * { font-family: arial, helvetica, san-serif; box-sizing: border-box; }
+	 section { border: 2px solid gray; margin: 1rem; padding: 1rem; overflow: auto; }
+	 section>h1 { border: 1px solid gray; padding: 1rem; margin: 0 1rem 0 0; background-color: gray; writing-mode: sideways-lr; float: left; font-size: 1rem; }
+	 hr { display: none; }
+	 @media print {
+	     html, body, section { margin: 0; padding: 0; }
+	     section { border: none; }
+	     section>h1 { border: none; padding: 0; margin: 1rem 0 0.5rem 0; background-color: transparent; writing-mode: inherit; float: none; font-size: 1.5rem; }
+	     section+section { page-break-before: always; }
+	     hr { display: block; }
+	 }
+	</style>
+    </head>
+    <body>
+	<section>
+	    <h1>Chapter 1: Introduction</h1>
+	    <hr/>
+	    <p>Some general information about the topic and the motivation for the writing should be given here.</p>
+	</section>
+	<section>
+	    <h1>Chapter 2: Literature Review</h1>
+	    <hr/>
+	    <p>This should be a summary of similar approaches to the topic by other authors.</p>
+	</section>
+	<section>
+	    <h1>Chapter 3: Method</h1>
+	    <hr/>
+	    <p>How is the topic going to be treated? Analytically, synthetically, stream-of-consciousness? Write about that here.</p>
+	</section>
+	<section>
+	    <h1>Chapter 4: Outcomes</h1>
+	    <hr/>
+	    <p>Here new insights should be presented, whether passing observations or deeper understanding.</p>
+	</section>
+	<section>
+	    <h1>Chapter 5: Conclusion</h1>
+	    <hr/>
+	    <p>This chapter should not repeat but should nevertheless summarise it all. It is not an easy one to write.</p>
+	</section>
+    </body>
+</html>
