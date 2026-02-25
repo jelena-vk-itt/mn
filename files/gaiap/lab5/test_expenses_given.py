@@ -23,14 +23,10 @@ GIVEN_TEST_INPUTS = [
     "c",                                     # Category chosen as grouping column
     "",                                      # Go back to the main menu
 
-    "4",                                     # Top-level menu option for deleting an item
-    "1",                                     # Item ID for the item to be deleted
+    "4",                                     # Top-level menu option for saving the data
     "",                                      # Go back to the main menu
 
-    "5",                                     # Top-level menu option for saving the data
-    "",                                      # Go back to the main menu
-
-    "6"                                      # Top-level menu option for exiting the program
+    "5"                                      # Top-level menu option for exiting the program
 ]
  
 INITIAL_FILE_CONTENT = \
@@ -38,6 +34,7 @@ INITIAL_FILE_CONTENT = \
     "1,01/01/26,Weekly shop,50.00,groceries\n"
 FILE_CONTENT_AFTER_TEST = \
     "id,date,description,amount,category\n" \
+    "1,01/01/26,Weekly shop,50.00,groceries\n" \
     "2,01/03/26,Bread and milk,5,groceries\n" \
     "3,02/03/26,Scrabble,24.99,games\n"
 
