@@ -1,0 +1,21 @@
+FUNCTIONAL
+- When the user is asked whether an invalid file should be overwritten, the correct behaviour is to exit the program on 'no' and to overwrite on 'yes'. Does the program fail to fulfill this?
+- Is the data for a new expense item collected piece-by-piece (what is required is a comma-separated list)?
+
+QUALITY
+- Does the code contain any unsound algorithms?
+- Are there any inconsistencies in communication with the user?
+- Are there any cases where user input or data read from a file is not checked for validity? For example:
+  - empty strings
+  - invalid numeric input
+- Are there any cases of broad exception handling?
+- Is there any hard-coding of constants where dynamic values could be used (for example table column widths or menu item numbers embedded in menu item text)?
+- Is there any repetition of literals used in the code?
+- Are there cases of uninformative variable naming?
+- Are there cases of naming that is not in line with Python conventions? 
+- Is there any dead code in the file?
+- Are there any serious problems with the code not identified with the previous questions?
+
+
+
+
