@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+	<style>
+	 label { min-width: 7em; display: inline-block; margin: 0.2em 0;}
+	 section { border: 1px solid black; padding: 1em; margin-right: 2em; float: left; }
+	 aside { border: 1px solid black; margin-top: 1em; padding: 1em; min-width: 27em; min-height: 1.5em; }
+	</style>
+    </head>
+    <body>
+	<h3>Information about animals</h3>
+	<p id="dogs" class="mammal">Dogs are friendly and loyal to their owners.</p>
+	<p id="cats" class="mammal">Cats are independent and are said to have seven lives.</p>
+	<p id="rabbits" class="mammal">Rabbits are cute but you have to be careful not to step on them.</p>
+	<p id="hamsters" class="mammal">Hamsters run around in hamster wheels and can be vicious.</p>
+	<p id="tortoises" class="reptile">Tortoises are slow and steady and will often outlive their owners.</p>
+	<p id="snakes" class="reptile">Snakes are interesting pets, if that is the word.</p>
+
+
+	<section>
+	    <h3>Exercise 1</h3>
+	    <button type="button"><h4>Click to fetch info about cats</h4></button>
+	    <br/>
+	    <aside id="info-box1"></aside>
+	</section>
+
+	<section>
+	    <h3>Exercise 2</h3>
+	    <button type="button"><h4>Click to list paragraph ids</h4></button>
+	    <br/>
+	    <aside id="info-box2"></aside>
+	</section>
+
+	<section>
+	    <h3>Exercise 3</h3>
+	    <button type="button"><h4>Click to list mammals and reptiles</h4></button>
+	    
+	    <aside>Mammals: <p id="m-list"></p></aside>
+	    <aside>Reptiles: <p id="r-list"></p></aside>
+	</section>
+
+	<section>
+	    <h3>Exercise 4</h3>
+	    <button type="button"><h4>Click to get first <span class="fw bold">h3</span></h4></button>
+	    <button type="button"><h4>Click to get <span class="fw bold">h3</span> elements from section elements</h4></button>
+	    <br/>
+	    <aside id="info-box4"></aside>
+	</section>
+		    
+	<script src="dom.js"></script>
+    </body>
+</html>
